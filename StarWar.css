@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body
+{
+    background-image: url("https://static.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest/scale-to-width-down/1200?cb=20190313021755");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 0, 225);
+}
+.hero{
+    
+    border: 2px solid white;
+    width: 80%;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    top: 90px;
+    right: -10%;
+    
+}
+.hero h1
+{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    line-height: 1.2;
+}
+.hero p
+{
+    font-size: 30px;
+    word-spacing: 10px;
+    line-height: 2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hero button{
+    width : 250px;
+    border: none;
+    color: rgb(6, 0, 24);
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    transition: 100ms ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.hero button:hover{
+    background-color: rgba(96, 45, 248, 0.244);
+    cursor: pointer;
+    color: white;
+}
+.content {
+    display: flex;
+    justify-content:center ;
+    margin-top: 150px ;
+}
+.content table, th,td
+{
+    border: 1px solid white;
+    padding: 10px ;
+    text-align: center;
+    
+}
+.content table
+{
+    width: 80%;
+}
+.content table thead
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+.content table td
+{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

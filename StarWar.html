@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StarWar.css">
+    <title>Ameya's Project JS201</title>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to prof Ameya's StarWar Generator</h1>
+        <p>Learn more about the actors </p>
+        <button onclick="generate()"> Generate </button>
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>height</th>
+                    <th>Mass</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="name">     </td>
+                    <td id="height">   </td>
+                    <td id="mass">     </td>
+                    <td id="gender">   </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function generate()
+        {
+            let id = Math.ceil(Math.random() * 83);
+           // alert(id);
+            fetch(`https://swapi.dev/api/people/${id}`)
+            .then( response => response.json())
+            .then( data => {
+                document.getElementById("name").innerText = data.name;
+                document.getElementById("height").innerText = data.height;
+                document.getElementById("mass").innerText = data.mass;
+                document.getElementById("gender").innerText = data.gender;
+            });
+
+        }
+    </script>
+    
+</body>
+</html>
